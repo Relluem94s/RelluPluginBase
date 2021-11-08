@@ -7,8 +7,6 @@ main: ${plugin.main}
 depend: [RelluEssentials]
 
 commands:
-     casp:
-          description: CaptureSpleef
+     base:
+          description: Base Command
           usage:
-          aliases: [capturespleef]
-          permission: rellu.capturespleef
