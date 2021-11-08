@@ -9,8 +9,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import de.relluem94.rellupluginbase.commands.CommandBase;
 import de.relluem94.rellupluginbase.events.EventBase;
 
-import static de.relluem94.rellupluginbase.Strings.PLUGIN_SECONDARY_COLOR;
-
 import static de.relluem94.minecraft.server.spigot.essentials.helpers.ChatHelper.consoleSendMessage;
 
 import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_BORDER;
@@ -21,9 +19,13 @@ import static de.relluem94.minecraft.server.spigot.essentials.Strings.LANG_COMMA
 import static de.relluem94.minecraft.server.spigot.essentials.Strings.LANG_EVENTS_REGISTERED;
 import static de.relluem94.minecraft.server.spigot.essentials.Strings.LANG_REGISTER_COMMANDS;
 import static de.relluem94.minecraft.server.spigot.essentials.Strings.LANG_REGISTER_EVENTS;
-import static de.relluem94.rellupluginbase.Strings.PLUGIN_NAME_CONSOLE;
-
 public class RelluPluginBase extends JavaPlugin {
+    
+    public final static String PLUGIN_NAME = "RelluPluginBase";
+    public final static String PLUGIN_PRIMARY_COLOR = "§5";
+    public final static String PLUGIN_SECONDARY_COLOR = "§6";
+    public final static String PLUGIN_NAME_CONSOLE = PLUGIN_SECONDARY_COLOR + "[" + PLUGIN_PRIMARY_COLOR + PLUGIN_NAME + PLUGIN_SECONDARY_COLOR + "]";
+    public final static String PLUGIN_PREFIX = PLUGIN_PRIMARY_COLOR + PLUGIN_NAME;
 
     @Override
     public void onEnable() {

@@ -1,13 +1,14 @@
-![CaptureSpleef](https://img.relluem94.de/logos/capturespleef.png)
+![RelluPluginBase](https://img.relluem94.de/logos/rellupluginbase.png)
 
-Minecraft Minigame (old needs to be reworked)
+A Base Plugin based on RelluEssentials
 
-# Todos
-* Check functionality
-* Split Events
-* Rewrite some Events
-* Better Team Management
-* Globallized Strings + language switch (e.g. de.yml)
+# How to use
+
+* Build RelluEssentials
+* Fork or Clone Repos
+* Edit POM
+* Create your own stuff
+* Build it!
 
 
 
