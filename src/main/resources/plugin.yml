@@ -1,0 +1,14 @@
+name: ${name}
+version: ${version}
+api-version: ${plugin.apiVersion}
+author: ${plugin.author}
+website: ${plugin.website}
+main: ${plugin.main}
+depend: [RelluEssentials]
+
+commands:
+     casp:
+          description: CaptureSpleef
+          usage:
+          aliases: [capturespleef]
+          permission: rellu.capturespleef
