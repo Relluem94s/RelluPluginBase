@@ -8,6 +8,6 @@ public class EventBase implements Listener {
 
     @EventHandler
     public void playerDeath(PlayerDeathEvent e) {
-        e.setDeathMessage("Â§c" + e.getDeathMessage());
+        e.setDeathMessage("§c" + e.getDeathMessage());
     }
 }
