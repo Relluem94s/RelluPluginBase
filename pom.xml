@@ -3,12 +3,12 @@
     <groupId>de.relluem94</groupId>
     <artifactId>rellupluginbase</artifactId>
     <name>RelluPluginBase</name>
-    <version>1.1</version>
+    <version>1.2</version>
     <url>https://github.com/Relluem94/CaptureSpleef</url>
     <properties>
         <plugin.apiVersion>1.16</plugin.apiVersion>
         <plugin.author>Relluem94</plugin.author>
-        <plugin.website>http://www.relluem94.de</plugin.website>
+        <plugin.website>https://www.relluem94.de</plugin.website>
         <plugin.main>de.relluem94.rellupluginbase.RelluPluginBase</plugin.main>
         <project.build.sourceEncoding>windows-1252</project.build.sourceEncoding>
     </properties>
@@ -44,7 +44,7 @@
         <dependency>
             <groupId>de.relluem94</groupId>
             <artifactId>relluessentials</artifactId>
-            <version>1.32</version>
+            <version>1.33</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
