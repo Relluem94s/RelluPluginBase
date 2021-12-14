@@ -1,4 +1,4 @@
-![RelluPluginBase](https://img.relluem94.de/logos/rellupluginbase.png)
+![RelluPluginBase](https://img.relluem94.de/logos/app/rellupluginbase.png)
 
 A Base Plugin based on RelluEssentials
 
