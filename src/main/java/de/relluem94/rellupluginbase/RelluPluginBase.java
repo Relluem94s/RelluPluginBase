@@ -22,8 +22,8 @@ import static de.relluem94.minecraft.server.spigot.essentials.Strings.LANG_REGIS
 public class RelluPluginBase extends JavaPlugin {
     
     public final static String PLUGIN_NAME = "RelluPluginBase";
-    public final static String PLUGIN_PRIMARY_COLOR = "ง5";
-    public final static String PLUGIN_SECONDARY_COLOR = "ง6";
+    public final static String PLUGIN_PRIMARY_COLOR = "ยง5";
+    public final static String PLUGIN_SECONDARY_COLOR = "ยง16";
     public final static String PLUGIN_NAME_CONSOLE = PLUGIN_SECONDARY_COLOR + "[" + PLUGIN_PRIMARY_COLOR + PLUGIN_NAME + PLUGIN_SECONDARY_COLOR + "]";
     public final static String PLUGIN_PREFIX = PLUGIN_PRIMARY_COLOR + PLUGIN_NAME;
 
