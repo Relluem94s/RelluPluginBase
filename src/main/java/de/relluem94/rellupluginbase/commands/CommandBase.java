@@ -1,11 +1,13 @@
 package de.relluem94.rellupluginbase.commands;
 
 import static de.relluem94.minecraft.server.spigot.essentials.helpers.ChatHelper.sendMessage;
-import de.relluem94.minecraft.server.spigot.essentials.permissions.Groups;
-import de.relluem94.minecraft.server.spigot.essentials.permissions.Permission;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+
+import de.relluem94.minecraft.server.spigot.essentials.permissions.Groups;
+import de.relluem94.minecraft.server.spigot.essentials.permissions.Permission;
 
 public class CommandBase implements CommandExecutor {
 

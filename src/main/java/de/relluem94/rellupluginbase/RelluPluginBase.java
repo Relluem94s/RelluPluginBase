@@ -1,5 +1,15 @@
 package de.relluem94.rellupluginbase;
 
+import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_FORMS_BORDER;
+import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_MANAGER_COMMANDS_REGISTERED;
+import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_MANAGER_EVENTS_REGISTERED;
+import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_MANAGER_REGISTER_COMMANDS;
+import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_MANAGER_REGISTER_EVENTS;
+import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_MANAGER_STARTTIME_MESSAGE;
+import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_MANAGER_START_MESSAGE;
+import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_MANAGER_STOP_MESSAGE;
+import static de.relluem94.minecraft.server.spigot.essentials.helpers.ChatHelper.consoleSendMessage;
+
 import java.util.Calendar;
 import java.util.Objects;
 
@@ -8,17 +18,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import de.relluem94.rellupluginbase.commands.CommandBase;
 import de.relluem94.rellupluginbase.events.EventBase;
-
-import static de.relluem94.minecraft.server.spigot.essentials.helpers.ChatHelper.consoleSendMessage;
-
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_BORDER;
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_STARTTIME;
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_START_MESSAGE;
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_STOP_MESSAGE;
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.LANG_COMMANDS_REGISTERED;
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.LANG_EVENTS_REGISTERED;
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.LANG_REGISTER_COMMANDS;
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.LANG_REGISTER_EVENTS;
 public class RelluPluginBase extends JavaPlugin {
     
     public final static String PLUGIN_NAME = "RelluPluginBase";
@@ -30,29 +29,29 @@ public class RelluPluginBase extends JavaPlugin {
     @Override
     public void onEnable() {
         long start = Calendar.getInstance().getTimeInMillis();
-        consoleSendMessage(PLUGIN_SECONDARY_COLOR, PLUGIN_BORDER);
+        consoleSendMessage(PLUGIN_SECONDARY_COLOR, PLUGIN_FORMS_BORDER);
         consoleSendMessage(PLUGIN_NAME_CONSOLE, "");
         consoleSendMessage(PLUGIN_NAME_CONSOLE, "");
-        consoleSendMessage(PLUGIN_NAME_CONSOLE, PLUGIN_SECONDARY_COLOR + PLUGIN_START_MESSAGE);
+        consoleSendMessage(PLUGIN_NAME_CONSOLE, PLUGIN_SECONDARY_COLOR + PLUGIN_MANAGER_START_MESSAGE);
         consoleSendMessage(PLUGIN_NAME_CONSOLE, "");
 
         PluginManager pm = getServer().getPluginManager();
-        consoleSendMessage(PLUGIN_NAME_CONSOLE, LANG_REGISTER_EVENTS);
+        consoleSendMessage(PLUGIN_NAME_CONSOLE, PLUGIN_MANAGER_REGISTER_EVENTS);
         pm.registerEvents(new EventBase(), this);
-        consoleSendMessage(PLUGIN_NAME_CONSOLE, LANG_EVENTS_REGISTERED);
+        consoleSendMessage(PLUGIN_NAME_CONSOLE, PLUGIN_MANAGER_EVENTS_REGISTERED);
         
-        consoleSendMessage(PLUGIN_NAME_CONSOLE, LANG_REGISTER_COMMANDS);
+        consoleSendMessage(PLUGIN_NAME_CONSOLE, PLUGIN_MANAGER_REGISTER_COMMANDS);
         Objects.requireNonNull(this.getCommand("base")).setExecutor(new CommandBase());
-        consoleSendMessage(PLUGIN_NAME_CONSOLE, LANG_COMMANDS_REGISTERED);
+        consoleSendMessage(PLUGIN_NAME_CONSOLE, PLUGIN_MANAGER_COMMANDS_REGISTERED);
 
         consoleSendMessage(PLUGIN_NAME_CONSOLE, "");
-        consoleSendMessage(PLUGIN_NAME_CONSOLE, PLUGIN_SECONDARY_COLOR + String.format(PLUGIN_STARTTIME, Calendar.getInstance().getTimeInMillis() - start));
+        consoleSendMessage(PLUGIN_NAME_CONSOLE, PLUGIN_SECONDARY_COLOR + String.format(PLUGIN_MANAGER_STARTTIME_MESSAGE, Calendar.getInstance().getTimeInMillis() - start));
         consoleSendMessage(PLUGIN_NAME_CONSOLE, "");
-        consoleSendMessage(PLUGIN_SECONDARY_COLOR + PLUGIN_BORDER, "");
+        consoleSendMessage(PLUGIN_SECONDARY_COLOR + PLUGIN_FORMS_BORDER, "");
     }
 
     @Override
     public void onDisable() {
-        consoleSendMessage(PLUGIN_NAME_CONSOLE, PLUGIN_SECONDARY_COLOR + PLUGIN_STOP_MESSAGE);
+        consoleSendMessage(PLUGIN_NAME_CONSOLE, PLUGIN_SECONDARY_COLOR + PLUGIN_MANAGER_STOP_MESSAGE);
     }
 }
