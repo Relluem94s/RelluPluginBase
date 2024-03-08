@@ -12,6 +12,7 @@
         <plugin.author>Relluem94</plugin.author>
         <plugin.website>http://www.relluem94.de</plugin.website>
         <plugin.main>de.relluem94.rellupluginbase.RelluPluginBase</plugin.main>
+        <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
         <maven.compiler.release>17</maven.compiler.release>
     </properties>
     <repositories>
@@ -51,6 +52,12 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>24.0.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
     <build>
