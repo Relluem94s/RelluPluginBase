@@ -3,7 +3,7 @@
     <groupId>de.relluem94</groupId>
     <artifactId>rellupluginbase</artifactId>
     <name>RelluPluginBase</name>
-    <version>1.4</version>
+    <version>1.5</version>
     <url>https://github.com/Relluem94/CaptureSpleef</url>
     <properties>
         <lombok.version>1.18.30</lombok.version>
@@ -30,10 +30,45 @@
             <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
         <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
+            <id>github</id>
+            <name>RelluEssentials</name>
+            <url>https://maven.pkg.github.com/Relluem94s/RelluEssentials</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
         </repository>
     </repositories>
+        <profiles>
+        <profile>
+            <id>github</id>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>https://repo1.maven.org/maven2</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>github</id>
+                    <name>RelluPluginBase</name>
+                    <url>https://maven.pkg.github.com/Relluem94s/RelluPluginBase</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
