@@ -7,7 +7,7 @@
     <url>https://github.com/Relluem94/CaptureSpleef</url>
     <properties>
         <lombok.version>1.18.30</lombok.version>
-        <spigot.version>1.20.1-R0.1-SNAPSHOT</spigot.version>
+        <spigot.version>1.21.9-R0.1-SNAPSHOT</spigot.version>
         <plugin.apiVersion>1.20</plugin.apiVersion>
         <plugin.author>Relluem94</plugin.author>
         <plugin.website>http://www.relluem94.de</plugin.website>
@@ -44,7 +44,7 @@
         <dependency>
             <groupId>de.relluem94</groupId>
             <artifactId>relluessentials</artifactId>
-            <version>4.1.7</version>
+            <version>4.3.2</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
