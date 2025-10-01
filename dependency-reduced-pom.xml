@@ -4,7 +4,7 @@
   <groupId>de.relluem94</groupId>
   <artifactId>rellupluginbase</artifactId>
   <name>RelluPluginBase</name>
-  <version>1.4</version>
+  <version>1.5</version>
   <url>https://github.com/Relluem94/CaptureSpleef</url>
   <build>
     <sourceDirectory>src/main/java</sourceDirectory>
@@ -33,7 +33,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>3.4.1</version>
+        <version>3.5.1</version>
         <executions>
           <execution>
             <phase>package</phase>
@@ -45,6 +45,10 @@
               <filters>
                 <filter>
                   <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/**</exclude>
+                    <exclude>module-info.class</exclude>
+                  </excludes>
                 </filter>
               </filters>
             </configuration>
@@ -67,6 +71,26 @@
       </plugin>
     </plugins>
   </build>
+  <profiles>
+    <profile>
+      <id>github</id>
+      <repositories>
+        <repository>
+          <releases />
+          <snapshots />
+          <id>central</id>
+          <url>https://repo1.maven.org/maven2</url>
+        </repository>
+        <repository>
+          <releases />
+          <snapshots />
+          <id>github</id>
+          <name>RelluPluginBase</name>
+          <url>https://maven.pkg.github.com/Relluem94s/RelluPluginBase</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
   <repositories>
     <repository>
       <id>central</id>
@@ -82,21 +106,24 @@
       <url>https://repo.papermc.io/repository/maven-public/</url>
     </repository>
     <repository>
-      <id>jitpack.io</id>
-      <url>https://jitpack.io</url>
+      <releases />
+      <snapshots />
+      <id>github</id>
+      <name>RelluEssentials</name>
+      <url>https://maven.pkg.github.com/Relluem94s/RelluEssentials</url>
     </repository>
   </repositories>
   <dependencies>
     <dependency>
       <groupId>org.spigotmc</groupId>
       <artifactId>spigot-api</artifactId>
-      <version>1.20.1-R0.1-SNAPSHOT</version>
+      <version>1.21.9-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>de.relluem94</groupId>
       <artifactId>relluessentials</artifactId>
-      <version>4.1.7</version>
+      <version>4.3.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -110,7 +137,7 @@
     <maven.compiler.release>17</maven.compiler.release>
     <plugin.apiVersion>1.20</plugin.apiVersion>
     <lombok.version>1.18.30</lombok.version>
-    <spigot.version>1.20.1-R0.1-SNAPSHOT</spigot.version>
+    <spigot.version>1.21.9-R0.1-SNAPSHOT</spigot.version>
     <plugin.author>Relluem94</plugin.author>
     <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
     <plugin.website>http://www.relluem94.de</plugin.website>

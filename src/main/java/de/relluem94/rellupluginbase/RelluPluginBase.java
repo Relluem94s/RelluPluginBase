@@ -1,13 +1,6 @@
 package de.relluem94.rellupluginbase;
 
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_FORMS_BORDER;
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_MANAGER_COMMANDS_REGISTERED;
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_MANAGER_EVENTS_REGISTERED;
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_MANAGER_REGISTER_COMMANDS;
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_MANAGER_REGISTER_EVENTS;
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_MANAGER_STARTTIME_MESSAGE;
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_MANAGER_START_MESSAGE;
-import static de.relluem94.minecraft.server.spigot.essentials.Strings.PLUGIN_MANAGER_STOP_MESSAGE;
+import static de.relluem94.minecraft.server.spigot.essentials.constants.Constants.*;
 import static de.relluem94.minecraft.server.spigot.essentials.helpers.ChatHelper.consoleSendMessage;
 
 import java.util.Calendar;

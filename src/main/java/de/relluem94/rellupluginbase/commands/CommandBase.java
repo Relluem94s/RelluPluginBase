@@ -1,6 +1,7 @@
 package de.relluem94.rellupluginbase.commands;
 
 import static de.relluem94.minecraft.server.spigot.essentials.helpers.ChatHelper.sendMessage;
+import static de.relluem94.rellupluginbase.RelluPluginBase.PLUGIN_PREFIX;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -16,7 +17,7 @@ public class CommandBase implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, Command cmd, @NotNull String cmdLabel, String[] args) {
         if(cmd.getName().equalsIgnoreCase("base")){
             if(Permission.isAuthorized(sender, Groups.getGroup("user").getId())){
-                sendMessage(sender, "Drop the (Data)Base!");
+                sendMessage(sender, PLUGIN_PREFIX + "Drop the (Data)Base!");
                 return true;
             }
         }
